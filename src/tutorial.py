@@ -36,10 +36,13 @@ print(f"Hasil BFS: {bfs_result}\n")
 
 # 5. Mencari jalur terpendek
 print("5. Mencari jalur terpendek:")
-paths_to_find = [(1, 6), (3, 7), (1, 5)]
+paths_to_find = [(1, 6), (3, 7), (1, 8)]  # 8 adalah node tidak ada
 for source, target in paths_to_find:
     path = find_shortest_path(G, source, target)
-    print(f"Jalur dari {source} ke {target}: {path}")
+    if path:
+        print(f"Jalur dari {source} ke {target}: {path}")
+    else:
+        print(f"Tidak ada jalur dari {source} ke {target}")
 print()
 
 # 6. Visualisasi graf

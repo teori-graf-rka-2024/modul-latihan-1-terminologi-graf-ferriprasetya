@@ -70,7 +70,10 @@ def find_shortest_path(G: nx.Graph, source: int, target: int) -> list[int]:
     Returns:
     list[int]: Urutan simpul dalam jalur terpendek
     """
-    return nx.shortest_path(G, source=source, target=target)
+    try:
+        return nx.shortest_path(G, source=source, target=target)
+    except:
+        return None
 
 
 import matplotlib.pyplot as plt
