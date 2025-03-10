@@ -28,6 +28,7 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install networkx
         python -m pip install pytest
+        python -m pip install matplotlib
     - name: Test with Python unit Test
       run: |
         pytest tests/test.py -v
